@@ -1,0 +1,64 @@
+version: '3'
+services:
+  app:
+    image: nginx:alpine
+    container_name: task_nginx
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html:delegated
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - task_app
+
+  php:
+    image: php:8.0.2-alpine
+    container_name: task_php
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    volumes:
+      - ./src:/var/www/html:delegated
+    ports:
+      - "9000:9000"
+    networks:
+      - task_app
+
+  mysql:
+    image: mysql:5.7.29
+    container_name: task_mysql
+    restart: unless-stopped
+    volumes:
+      - ./mysql:/var/lib/mysql
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: task
+      MYSQL_ROOT_PASSWORD: 123456789
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - task_app
+
+  phpMyAdmin:
+    image: 'phpmyadmin:latest'
+    container_name: task_phpMyAdmin
+    ports:
+      - 8081:80
+    environment:
+      MYSQL_ROOT_PASSWORD: '123456789'
+    links:
+      - 'mysql:db'
+    depends_on:
+      - mysql
+    networks:
+      - task_app
+
+networks:
+  task_app:

@@ -1,0 +1,128 @@
+.branch-section {
+    height: 200px;
+}
+.branch-tab {
+    position: relative;
+    margin-top: -35px;
+    z-index: 1;
+}
+.branch-tab .branch-list {
+    width: 100%;
+    margin: 0 auto;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none !important;
+    list-style-type: none !important;
+}
+.branch-tab .branch-list .branch-item {
+    position: relative;
+    float: left;
+    width: 13.1%;
+    padding: 0 8px;
+    cursor: default;
+}
+.coll-group .middle .coll {
+    vertical-align: middle;
+}
+.coll-group .coll {
+    display: table-cell;
+}
+.branch-tab .branch-list .branch-box {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+}
+.branch-tab .branch-list .head {
+    position: relative;
+    height: 88%;
+    padding: 12px 0;
+    display: block;
+    z-index: 2;
+}
+a {
+    outline: none !important;
+    text-decoration: none !important;
+}
+.branch-tab .branch-list .head .branch-imgds {
+    font-size: 12px;
+    color: #0086cd;
+    font-weight: 400;
+    display: block;
+    height: 65px;
+}
+.branch-tab .branch-list .branch-imgic {
+    max-height: 47px;
+}
+.wh-100 {
+    width: 100%;
+    height: 100%;
+}
+.lazyloaded {
+    visibility: visible;
+}
+.branch-tab .branch-list .head .BrancTitle {
+    margin: 0;
+    padding: 5px 0 0 0;
+}
+.branch-tab .branch-list .branch-link {
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*bottom: 12px;*/
+    /*width: 100%;*/
+    font-size: 12px;
+    color: #0086cd;
+}
+.branch-tab .branch-list .head i.material-icons {
+    font-size: 12px;
+    border-radius: 12px;
+    border: solid 0.5px #0086cd;
+    max-width: 13px;
+    min-width: 13px;
+}
+.branch-tab .branch-list .head i {
+    position: unset;
+    top: unset;
+    right: unset;
+    color: unset;
+    transform: translateY(9%);
+}
+
+.branch-tab .branch-list .head i .material-icons {
+    font-size: 12px;
+    border-radius: 12px;
+    border: solid 0.5px #0086cd;
+    max-width: 13px;
+    min-width: 13px;
+}
+.branch-tab .branch-list .head i {
+    position: unset;
+    top: unset;
+    right: unset;
+    color: unset;
+    transform: translateY(9%);
+}
+.only-desktop-inline {
+    display: inline-block !important;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga';
+}
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
