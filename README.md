@@ -1,4 +1,4 @@
-# Employees Task Manager
+# Courses & Categories Task
 
 ## Getting started:
 1. Fork this Repository
